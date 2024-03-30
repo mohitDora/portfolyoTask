@@ -1,0 +1,26 @@
+.div-2{
+    padding: 2rem 4rem;
+     background-color: rgba(255, 255, 255, 0.06);
+     -webkit-backdrop-filter: blur(0.4rem);
+     backdrop-filter: blur(0.4rem);
+ 
+     -webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+     box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+     border: 1.5px solid rgba(255, 255, 255, 0.06);
+     border-radius: 0.5rem;
+
+     transition: background-color 0.1s ease-in-out;
+    
+ }
+ .div-2:hover{
+     background-color: rgba(255, 255, 255, 0.2);
+ }
+ .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--red);
+    transform-origin: 0%;
+  }
