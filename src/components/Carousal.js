@@ -27,8 +27,8 @@ return(
     
     <Typography  variant='h4' gutterBottom sx={{fontWeight:"200",'::first-letter': { fontSize:"4rem" }}}>{msg}</Typography>
    
-    <Typography variant='subtitle' sx={{fontSize:"2rem",marginTop:"2rem"}} gutterBottom>{item.name} </Typography>
-    <Typography variant="h6" sx={{fontWeight:"200"}}>{item.position}</Typography>
+    <Typography variant='subtitle' sx={{fontSize:"2.4rem",marginTop:"2rem"}} gutterBottom>{item.name} </Typography>
+    <Typography variant="h6" sx={{fontWeight:"200",fontSize:"1.6rem"}}>{item.position}</Typography>
     
     
   </div>
@@ -38,8 +38,8 @@ return(
 
   <>
   <Title title="Testimonials"></Title>
-  <Box sx={{padding:"0 6.4rem"}}>
-  <Carousel autoplay style={{width:"60vw",margin:"auto"}}>
+  <Box sx={{padding:"0 6.4rem",width:{xs:"100vw",md:"60vw",margin:"auto"}}}>
+  <Carousel autoplay sx={{width:"100%",margin:"auto"}}>
     {displaytestimonials}
   </Carousel>
   </Box>
