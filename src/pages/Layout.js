@@ -13,25 +13,27 @@ import FloatingText from '../components/FloatingText'
 import CustomCursor from '../components/CustomCursor'
 import Footer from '../components/Footer'
 import Preloader from '../components/PreLoading'
+import Carousal from "../components/Carousal"
 
 function Layout() {
-  
+
   return (
 
-    <Box sx={{width:"100vw",overflowX:"hidden"}}>
-     <Navbar></Navbar>
- <Home></Home>
- <FloatingText></FloatingText>
- <Profile></Profile>
- <Skills></Skills>
- <Drawer></Drawer>
- <Experience></Experience>
- <Project></Project>
- <Services></Services>
- <Contact></Contact>
- <CustomCursor></CustomCursor>
- <Footer></Footer>
- <Preloader></Preloader>
+    <Box sx={{ width: "100vw", overflowX: "hidden" }}>
+      <Navbar></Navbar>
+      <Home></Home>
+      <FloatingText></FloatingText>
+      <Profile></Profile>
+      <Skills></Skills>
+      <Drawer></Drawer>
+      <Experience></Experience>
+      <Project></Project>
+      <Services></Services>
+      <Carousal />
+      <Contact></Contact>
+      <CustomCursor></CustomCursor>
+      <Footer></Footer>
+      <Preloader></Preloader>
     </Box>
 
   )

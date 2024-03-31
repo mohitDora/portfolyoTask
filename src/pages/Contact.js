@@ -22,7 +22,11 @@ const ContactForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-   
+   setFormData({
+    name: '',
+    email: '',
+    message: '',
+   })
     // Here you can send the form data to your backend or perform any other actions
   };
 
