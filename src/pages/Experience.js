@@ -74,7 +74,7 @@ return(
 
   return (
     <>
-    <Title title="Timeline" name="experience"></Title>
+    <Title title="Timeline" name="experiences"></Title>
     <Box sx={{padding:"0 6.4rem ",display:"flex",flexDirection:{xs:'column',md:'row'},justifyContent:"space-between"}}>
     <Stepper orientation="vertical" >
     <motion.div
