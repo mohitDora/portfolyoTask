@@ -33,7 +33,7 @@ function FloatingText() {
   return (
     <div onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)} ref={profileRef} style={{padding:"0 6.4rem" ,marginTop:"16rem"}}>
                 
-                    <Typography sx={{ fontFamily: "neue-regular", fontSize: "10vw", transform: `translateY(-${translateY}px)`, opacity: opacity }}>{about?.quote} "</Typography>
+                    <Typography sx={{ fontFamily: "neue-regular", fontSize:{xs: "10vh",md:"10vw"}, transform: `translateY(-${translateY}px)`, opacity: opacity }}>{about?.quote} "</Typography>
                 
             </div>
   )

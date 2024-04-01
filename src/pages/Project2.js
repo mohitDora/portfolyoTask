@@ -23,7 +23,7 @@ function Project2({ slice }) {
 
     const displayProjects = !(projects === undefined) ? slicedData?.map((item, index) => {
         return (
-            <Box sx={{width:{xs:"45%",md:"30%"}}} key={index} onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
+            <Box sx={{width:{xs:"100%",md:"30%"}}} key={index} onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
 <motion.div
                 initial={{ x: 100,opacity:0 }}
                 whileInView={{ x: 0,opacity:1 }}
@@ -43,7 +43,7 @@ function Project2({ slice }) {
             <Title title="Projects" name="projects"></Title>
             <Box sx={{ display: "flex", gap: "2rem", flexWrap: "wrap", padding: "0 6.4rem",justifyContent:"space-between" }}>
                 {displayProjects}
-                <Box sx={{width:{xs:"45%",md:"30%"}}}  onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
+                <Box sx={{width:{xs:"100%",md:"30%"}}}  onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
 <motion.div
                 initial={{ x: 100,opacity:0 }}
                 whileInView={{ x: 0,opacity:1 }}

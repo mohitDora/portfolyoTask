@@ -17,6 +17,7 @@ function Skills() {
        
       
         return(
+            <Box sx={{width:{xs:"100%",md:"40rem"}}}>
             <motion.div
             initial={{ x: 100,opacity:0 }}
             whileInView={{ x: 0,opacity:1 }}
@@ -24,7 +25,7 @@ function Skills() {
             transition={{ duration: 2, delay:index/100,type:"spring"  }}
             
             >
-            <Box sx={{width:{xs:"35vw",md:"30rem"}}}>
+            <Box >
                 <Box sx={{display:'flex',alignContent:"center",gap:"2rem"}}>
                 
                 
@@ -38,7 +39,7 @@ function Skills() {
             <Typography variant='subtitle' >{item.percentage}%</Typography>
             </Box>
             
-            </Box></motion.div>
+            </Box></motion.div></Box>
         )
     }): <Typography>Server Error</Typography>
     return (
@@ -52,7 +53,7 @@ function Skills() {
             </Box> */}
           
         </motion.div>
-        <Box sx={{marginTop:"4rem", padding: "0 6.4rem",display:"flex",flexWrap:"wrap",gap:"2rem",justifyContent:"space-between"}}>
+        <Box sx={{marginTop:"4rem", padding:"6.4rem",display:"flex",flexWrap:"wrap",gap:"2rem",justifyContent:"space-between"}}>
         {sliderDisplay}
         </Box>
         </>

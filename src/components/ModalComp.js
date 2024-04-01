@@ -23,7 +23,7 @@ maxHeight:"90vh",
     bgcolor: 'background.paper',
 border:"none",
     boxShadow: 24,
-    p: 4,
+    p: "2rem",
 };
 
 export default function TransitionsModal() {
@@ -52,7 +52,7 @@ export default function TransitionsModal() {
                 <Fade in={modalOpen}>
                     <Box sx={style}>
 
-                        <Box sx={{ width: "50vw", aspectRatio: "1.77", backgroundImage: `url(${currProject?.image.url})`, backgroundSize: "cover", margin: "1rem 0", borderRadius: "0.5rem", transition: 'background-image 0.3s ease-in' }}></Box>
+                        <Box sx={{ width: {xs:"80vw",md:"60vw"}, aspectRatio: "1.77", backgroundImage: `url(${currProject?.image.url})`, backgroundSize: "cover", margin: "1rem 0", borderRadius: "0.5rem", transition: 'background-image 0.3s ease-in' }}></Box>
                         <Typography variant='h2' gutterBottom>{currProject?.title}</Typography>
                         <Typography variant='h5' gutterBottom sx={{ fontWeight: "200" }}>{currProject?.description}</Typography>
                         <Box sx={{ display: "flex", gap: "1rem", alignItems: "center", margin: "2rem 0", flexWrap: "wrap" }}><Typography sx={{ fontSize: "1.6rem" }}>Stack used : </Typography>

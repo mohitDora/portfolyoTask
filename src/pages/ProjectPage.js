@@ -52,7 +52,7 @@ useEffect(()=>{
 
     const displayProjects = !(projects === undefined) ? (value==="All"?projects:filterData)?.map((item, index) => {
         return (
-            <Box sx={{width:{xs:"45%",md:"30%"}}} key={index} onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
+            <Box sx={{width:{xs:"100%",md:"30%"}}} key={index} onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
 <motion.div
                 initial={{ x: 100,opacity:0 }}
                 whileInView={{ x: 0,opacity:1 }}
@@ -77,12 +77,7 @@ useEffect(()=>{
         </IconButton>
             <Title title="Projects" name="projects"></Title>
       <Box sx={{display:"flex",justifyContent:"center",padding:'4rem'}}>
-      <motion.div
-    initial={{ opacity:0 }}
-            whileInView={{ opacity:1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 2,type:"spring"  }} 
-    >
+  
       <Tabs
         value={value}
         onChange={handleChange}
@@ -90,10 +85,11 @@ useEffect(()=>{
         aria-label="secondary tabs example"   variant="scrollable"
         scrollButtons="auto" sx={{marginBottom:"4rem"}}
       >
-        
+       
         {unique}
+ 
       </Tabs>
-      </motion.div>
+
       </Box>
            
            
