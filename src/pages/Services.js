@@ -19,17 +19,16 @@ function Services() {
         
         const randomIndex = Math.floor(Math.random() * images.length);
         return(
-<>
-<motion.div
-//  initial={even?{x:100,opacity:0}:{x:-100,opacity:0}}
+<Box sx={{width:{xs:"100%",md:"48%"}}}>
+<motion.div key={index}
 initial={{x: 100,opacity:0}}
  whileInView={{ x: 0,opacity:1 }}
  viewport={{ once: true }}
  transition={{ duration: 2, delay:index/100,type:"spring"  }}
 >
-<Divider></Divider>
 
-<Box sx={{padding:"4rem 0",backgroundPosition:"10vw",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage:index%2===0? `linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0.1), rgba(0,0,0,0)), url(${images[randomIndex]})`:""}}>
+
+<Box sx={{padding:"4rem 0",backgroundPosition:"10vw",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage: `linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0.1), rgba(0,0,0,0)), url(${item.image.url})`}}>
 <Typography variant='h4'gutterBottom >{item.name} <IconButton>
    <ArrowOutwardIcon sx={{fontSize:"2rem"}}></ArrowOutwardIcon>
 </IconButton></Typography>
@@ -38,21 +37,20 @@ initial={{x: 100,opacity:0}}
 </Box>
 
 
-<Divider></Divider>
 </motion.div>
-</>
+</Box>
         )
     }):<Typography>Server Error</Typography>
 
     console.log(apiData)
   return (
-    <motion.div>
+    <>
 
     <Title title="Services" name="services"></Title>
-    <Box sx={{margin:"0 6.4rem "}}>
+    <Box sx={{margin:"0 6.4rem ",display:'flex',gap:"2rem",flexWrap:"wrap",justifyContent:"space-between"}}>
     {displayServices}
     </Box>
-    </motion.div>
+    </>
   )
 }
 

@@ -41,3 +41,20 @@ color:rgba(255,255,255,0.8);
 border-radius: 0.5rem;
   
 }
+.glass-3{
+   
+    background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(0.4rem);
+	backdrop-filter: blur(0.4rem);
+font-size: 1.6rem;
+	-webkit-box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+
+color:rgba(255,255,255,0.8);
+border-radius: 0.5rem;
+  
+}
+.glass-3:hover{
+	background-color: rgba(255, 255, 255, 0.2);
+}

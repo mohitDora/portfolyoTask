@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect,useRef } from 'react';
 import { Context } from '../context/ContextApi';
 import { Carousel } from 'antd';
-import { Box, Typography } from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import Title from './Title';
 const contentStyle = {
   height: '160px',
@@ -24,8 +24,8 @@ const Carousal = () => {
     const msg=`${item.review}`
 return(
   <div className="glass-2" key={index} style={{display:"flex",gap:"2rem"}}>
-    
-    <Typography  variant='h4' gutterBottom sx={{fontWeight:"200",'::first-letter': { fontSize:"4rem" }}}>{msg}</Typography>
+    <Avatar sx={{width: "5rem", height: "5rem",margin:"2rem 0"}} src={item.image.url}></Avatar>
+    <Typography  variant='h4' gutterBottom sx={{fontWeight:"200"}}>{msg}</Typography>
    
     <Typography variant='subtitle' sx={{fontSize:"2.4rem",marginTop:"2rem"}} gutterBottom>{item.name} </Typography>
     <Typography variant="h6" sx={{fontWeight:"200",fontSize:"1.6rem"}}>{item.position}</Typography>

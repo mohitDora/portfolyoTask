@@ -5,7 +5,11 @@ import { deepPurple } from '@mui/material/colors';
 import Layout from './pages/Layout';
 import React, { useContext, useEffect } from 'react';
 import { Context } from './context/ContextApi';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import PageProgress from './components/PageProgress';
+import ProjectPage from './pages/ProjectPage';
+import CustomCursor from './components/CustomCursor';
+import ModalComp from "./components/ModalComp"
 
 function App() {
   const { setApidata,setError,setLoading } = useContext(Context);
@@ -63,8 +67,16 @@ palette:{
 
   return (
     <ThemeProvider theme={theme}>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout></Layout>}></Route>
+        <Route path='/projects' element={<ProjectPage></ProjectPage>}></Route>
+        
+      </Routes>
       <PageProgress></PageProgress>
-<Layout></Layout>
+      <CustomCursor></CustomCursor>
+      <ModalComp></ModalComp>
+</BrowserRouter>
   </ThemeProvider>
   );
 }

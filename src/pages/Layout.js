@@ -14,6 +14,10 @@ import CustomCursor from '../components/CustomCursor'
 import Footer from '../components/Footer'
 import Preloader from '../components/PreLoading'
 import Carousal from "../components/Carousal"
+import SliderComp from "../components/SliderComp"
+import Services2 from './Services2'
+import Project2 from './Project2'
+import ModalComp from "../components/ModalComp"
 
 function Layout() {
 
@@ -27,13 +31,16 @@ function Layout() {
       <Skills></Skills>
       <Drawer></Drawer>
       <Experience></Experience>
-      <Project></Project>
+      {/* <Project></Project> */}
+      <Project2 slice="5"></Project2>
       <Services></Services>
+      {/* <Services2></Services2> */}
       <Carousal />
       <Contact></Contact>
-      <CustomCursor></CustomCursor>
+      
       <Footer></Footer>
       <Preloader></Preloader>
+      
     </Box>
 
   )
