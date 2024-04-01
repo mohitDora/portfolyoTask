@@ -50,7 +50,7 @@ useEffect(()=>{
 },[value])
   
 
-    const displayProjects = !(projects === undefined) ? (value==="All"?projects.reverse():filterData)?.map((item, index) => {
+    const displayProjects = !(projects === undefined) ? (value==="All"?projects:filterData)?.map((item, index) => {
         return (
             <Box sx={{width:{xs:"45%",md:"30%"}}} key={index} onMouseEnter={()=>setHovering(true)} onMouseLeave={()=>setHovering(false)}>
 <motion.div
