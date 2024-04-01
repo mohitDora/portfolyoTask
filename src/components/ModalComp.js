@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { Chip, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkIcon from '@mui/icons-material/Link';
-
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const style = {
@@ -51,7 +51,9 @@ export default function TransitionsModal() {
             >
                 <Fade in={modalOpen}>
                     <Box sx={style}>
-
+<IconButton onClick={()=>setModalOpen(false)} sx={{marginLeft:"95%"}}>
+    <CloseIcon sx={{fontSize:"3rem"}}></CloseIcon>
+</IconButton>
                         <Box sx={{ width: {xs:"80vw",md:"60vw"}, aspectRatio: "1.77", backgroundImage: `url(${currProject?.image.url})`, backgroundSize: "cover", margin: "1rem 0", borderRadius: "0.5rem", transition: 'background-image 0.3s ease-in' }}></Box>
                         <Typography variant='h2' gutterBottom>{currProject?.title}</Typography>
                         <Typography variant='h5' gutterBottom sx={{ fontWeight: "200" }}>{currProject?.description}</Typography>
