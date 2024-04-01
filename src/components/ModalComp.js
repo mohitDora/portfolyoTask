@@ -51,7 +51,7 @@ export default function TransitionsModal() {
             >
                 <Fade in={modalOpen}>
                     <Box sx={style}>
-<IconButton onClick={()=>setModalOpen(false)} sx={{marginLeft:"95%"}}>
+<IconButton onClick={()=>setModalOpen(false)} sx={{position:'relative',right:"5%"}}>
     <CloseIcon sx={{fontSize:"3rem"}}></CloseIcon>
 </IconButton>
                         <Box sx={{ width: {xs:"80vw",md:"60vw"}, aspectRatio: "1.77", backgroundImage: `url(${currProject?.image.url})`, backgroundSize: "cover", margin: "1rem 0", borderRadius: "0.5rem", transition: 'background-image 0.3s ease-in' }}></Box>
